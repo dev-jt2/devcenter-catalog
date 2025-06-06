@@ -1,0 +1,23 @@
+$schema: "1.0"
+name: "python-devbox-customization"
+image: microsoftvisualstudio_visualstudioplustools_vs-2022-ent-general-win11-m365-gen2
+tasks:
+  - name: choco
+    description: Install Python 3
+    parameters:
+      package: python
+      version: 3.12.4
+  - name: MyTaskCatalog/git-clone
+    description: Clone the team repository
+    parameters:
+      repositoryUrl: https://github.com/dev-jt2/devcenter-catalog
+      directory: 'C:\Repos'
+userTasks:
+  - name: MyTaskCatalog/winget
+    description: Install Docker Desktop
+    parameters:
+      package: Docker.DockerDesktop
+  - name: MyTaskCatalog/powershell
+    description: Install wsl2
+    parameters:
+      command: wsl --install Ubuntu

@@ -1,5 +1,4 @@
 # This is a Visual Studio extension installation task for Dev Box.
-
 $schema: 1.0
 name: install-vs-extension
 description: Installs a Visual Studio extension
